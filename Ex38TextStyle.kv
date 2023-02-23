@@ -1,0 +1,21 @@
+# Text Style example exercise 38
+# TS_CustLayout:
+<TS_CustLayout@Widget>:
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+        
+        Label:
+            markup: True
+            font_size: 24
+            text: "[color=#779111][b]Label[/b][/color] [sup]1[/sup] [sub]2[/sub]" #f"{int(cust_progress_bar.value*100)}%"
+        
+        Label:
+            markup: True
+            font_size: 24
+            text: "[size=28][i]Label[/i][/size] [font=times]2[/font]" #f"{int(cust_progress_bar.value*100)}%"
+        
+        Button:
+            markup: True
+            font_size: 24
+            text: "[u]Butt[/u] [s]on[/s]"

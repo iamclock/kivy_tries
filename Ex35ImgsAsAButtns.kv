@@ -1,0 +1,30 @@
+# imgs as a buttns example exercise 35
+# CustomLayout:
+<CustomLayout@Widget>:
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+        
+        padding: 50
+        spacing: 20
+        
+        Label:
+            id: cust_label
+            text: "Custom Label"
+            font_size: 22
+        
+        Button:
+            # text: "text_button"
+            # font_size: 22
+            size_hint: .15, .12
+            pos_hint: {"center_x": .5}
+            background_color: 0, 0, 0, 0
+            
+            on_press: root.buttn_pressed()
+            on_release: root.buttn_released()
+            
+            Image:
+                id: cust_img
+                source: "imgs/btn.jpg"
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y

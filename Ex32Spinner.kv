@@ -1,0 +1,28 @@
+# Spinner example exercise 32
+# здесь не вызывается "CustomLayout:" явно,
+#+ потому что определён класс в скрипте с явной сборкой и последующим его вызовом
+# SpinnerEx:
+<SpinnerEx>:
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+    
+        Label:
+            id: click_label
+            #FIXME: Почему то накладывается текст сообщения спиннера,
+            #+ после его выбора надо разобраться почему.
+            #+ Правится заданием текста сообщения Label из конструктора класса (build),
+            #+ из которого создаётся экземпляр класса CustomLayout
+            #FIXED: Ошибка была из-за Builder.load_file("ExampleApp.kv"), который загружался
+            #+ ещё и неявно из-за чего было толи 2 слоя, толи 2 экземпляра класса Label
+            text: "Issuer"
+            font_size: 22
+        
+        Spinner:
+            id: spinner_id
+            text: "Issuer"
+            values: ["ip1", "ip2", "ip3", "ip4"]
+            on_text: root.spinner_clicked(spinner_id.text)
+        
+        BoxLayout:
+

@@ -1,0 +1,106 @@
+# Popup example exercise 30
+# PopupEx:
+#:import Factory kivy.factory.Factory
+<PopupWindow@Popup>:
+    auto_dismiss: False
+    size_hint: .6, .2
+    pos_hint: {"x": .2, "top": .65}
+    
+    title: "Popup window"
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+        
+        Label:
+            text: "Something interesting"
+            font_size: 18
+        
+        Button:
+            text: "Okay"
+            font_size: 18
+            on_release: root.dismiss()
+    
+
+<PopupEx@Widget>:
+    BoxLayout:
+        size: root.width, root.height
+        orientation: "vertical"
+
+        Label:
+            text: "Popup Label"
+            font_size: 18
+            
+        Button:
+            text: "Popup Button"
+            font_size: 18
+            on_release: Factory.PopupWindow().open()
+        
+
+# MyLayout2:
+# MyGridLayout:
+
+# <TextInput>:
+#     font_size: 18
+    # size_hint: 1, .3
+
+# <Label>:
+#     font_size: 22
+#     size_hint: 1, .4
+
+<MyLayout2@Widget>:
+    background_color: 0, 187/255, 1,1
+    canvas.before:
+        Color:
+            rgba: self.background_color
+        Rectangle:
+            size: self.size
+            pos: self.pos
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+        padding: 10
+        spacing: 10
+        
+        Label:
+            font_size: 22
+            size_hint: 1, .4
+            text: "Name"
+            background_color: 0, 0, 1, 1
+            color: 0, 1, 0, 1
+            bold: True
+            italic: True
+            outline_color: 1, 1, 1, 1
+            outline_width: 2
+            canvas.before:
+                Color:
+                    rgba: self.background_color
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+        TextInput:
+            font_size: 18
+            size_hint: 1, .3
+            multiline: False
+
+        Label:
+            background_color: 204/255, 131/255, 6/255, 1
+            canvas.before:
+                Color:
+                    rgba: self.background_color
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+            font_size: 22
+            size_hint: 1, .4
+            text: "SurName"
+        TextInput:
+            font_size: 18
+            size_hint: 1, .35
+            multiline: False
+
+        Button:
+            text: "Submit"
+        Button:
+            text: "Clear"
+        
+

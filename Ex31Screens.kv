@@ -1,0 +1,44 @@
+# ScreenManager example exercise 31
+# WindowsManager:
+    # MainWindow:
+    # RequestSatisfaction:
+    # CertificateConverter:
+
+<MainWindow>:
+    name: "Main"
+    
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+        
+        Label:
+            text: "Main"
+            font_size: 22
+        
+        Button:
+            text: "Next screen"
+            font_size: 22
+            on_release:
+                app.root.current = "Satisfaction"
+                root.manager.transition.direction = "left"
+    
+<RequestSatisfaction>:
+    name: "Satisfaction"
+    
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+        
+        Label:
+            text: "Satisfaction"
+            font_size: 22
+        
+        Button:
+            text: "Next screen"
+            font_size: 22
+            on_release: 
+                app.root.current = "Main"
+                root.manager.transition.direction = "right"
+
+<CertificateConverter>:
+

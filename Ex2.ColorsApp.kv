@@ -1,0 +1,63 @@
+# MyLayout:
+<MyLayout@Widget>:
+    BoxLayout:
+        size: root.width, root.height
+        orientation: "vertical"
+        spacing: 20
+        padding: 50
+        Button:
+            text: "qwe"
+        Button:
+            text: "asd"
+        Button:
+            pos_hint: {"center_x": .5}
+            size_hint: .15, .25
+            text: "zxc"
+
+
+<MyGridLayout>
+
+    name: name
+    surname: surname
+    color: color
+
+    ScrollView:
+        size: root.width, root.height
+        BoxLayout:
+            spacing: 20
+            orientation: "vertical"
+            GridLayout:
+                cols: 2
+                pos_hint: {"center_x": .5}
+                size_hint: .5, .1
+
+                Label:
+                    text: "Name"
+                TextInput:
+                    id: name
+                    text: "text_name"
+                    multiline: False
+
+                Label:
+                    text: "Surname"
+                TextInput:
+                    id: surname
+                    text: "text_surname"
+                    multiline: False
+
+                Label:
+                    text: "Color"
+                TextInput:
+                    id: color
+                    text: "text_color"
+                    multiline: False
+
+            Button:
+                text: "Submit"
+                font_size: 22
+                background_color: .2, .9, .1, 1
+                # background_normal: "imgs/5.large.jpg"
+                pos_hint: {"center_x": .5}
+                size_hint: (.25, .1)
+                # height: 100
+                on_press: root.submit(self)

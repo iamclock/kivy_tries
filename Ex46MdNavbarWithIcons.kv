@@ -1,0 +1,42 @@
+# Navbar with icons example exercise 46
+
+
+<CustomMDLabel@MDLabel>:
+    halign: app.Halign.center
+
+BoxLayout:
+    orientation: app.Orientation.vertical
+    
+    
+    MDTopAppBar:
+        title: "Bottom Navbar"
+        md_bg_color: .2, .2, .2, 1
+        specific_text_color: 1, 1, 1, 1
+    
+    MDBottomNavigation:
+        # color
+        panel_color: .8, .5, .3, 1
+    
+        MDBottomNavigationItem:
+            name: "screen1"
+            text: "Python"
+            icon: "language-python"
+        
+            CustomMDLabel:
+                text: "Python"
+        
+        MDBottomNavigationItem:
+            name: "screen2"
+            text: "GitHub"
+            icon: "github"
+        
+            CustomMDLabel:
+                text: "GitHub"
+        
+        MDBottomNavigationItem:
+            name: "screen3"
+            text: "GitLab"
+            icon: "gitlab"
+        
+            CustomMDLabel:
+                text: "Gitlab"

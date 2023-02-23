@@ -1,0 +1,25 @@
+# Bottom bar button example exercise 45
+
+MDBoxLayout:
+    orientation: "vertical"
+    
+    MDTopAppBar:
+        title: "sasasas"
+        left_action_items: [["menu"]]
+        right_action_items: [["dots-vertical"]]
+        
+    MDLabel:
+        id: my_label
+        text: "sdsdsds"
+        halign: "center"
+        
+    MDBottomAppBar:
+        MDTopAppBar:
+            icon: "git"
+            left_action_items: [["menu", lambda x: app.str_changing_on_pressing("Hamburger")]]
+            title: "Bottom menu"
+            type: "bottom"
+            # mode: "free-end"
+            mode: "end"
+            on_action_button: app.str_changing_on_pressing("This is the message")
+            

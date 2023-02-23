@@ -1,0 +1,25 @@
+# Switches example exercise 39
+# CustLayout39:
+<CustLayout39>:
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+        
+        Label:
+            id: cust_label
+            font_size: 24
+            text: "Switch on" if cust_switch.active else "Switch off"
+        
+        Switch:
+            id: cust_switch
+            active: True
+            # disabled: True
+            font_size: 28
+            on_active: root.switched(self, self.active)
+        
+        Label:
+            id: cust_label2
+            # disabled: True
+            disabled: not cust_switch.active
+            font_size: 24
+            text: "Label 2"
