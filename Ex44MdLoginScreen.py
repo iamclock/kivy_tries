@@ -7,8 +7,8 @@ class Ex44MdLoginScreen(MDApp):
     presets: tuple = ("Hello <username>",
                       "Already logged in", "Well again",
                       "Over and over and over again", "...")
-    preset_ind: int = 0
-    preset_length: int = len(presets)
+    presets_ind: int = 0
+    presets_length: int = len(presets)
 
     def build(self):
         self.theme_cls.theme_style = "Light"
@@ -17,8 +17,8 @@ class Ex44MdLoginScreen(MDApp):
         return Builder.load_file("Ex44MdLoginScreen.kv")
 
     def logger(self) -> None:
-        self.root.ids.welcome_label.text = self.presets[self.preset_ind]
-        self.preset_ind = (self.preset_ind + 1) % self.preset_length
+        self.root.ids.welcome_label.text = self.presets[self.presets_ind]
+        self.presets_ind = (self.presets_ind + 1) % self.presets_length
         return
 
     def clear(self) -> None:

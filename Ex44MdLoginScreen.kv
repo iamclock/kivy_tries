@@ -1,5 +1,6 @@
 # Login screen example exercise 44
-
+#:import Orientation tools.Orientation
+#:import Halign tools.Halign
 
 Screen:
     MDCard:
@@ -9,13 +10,13 @@ Screen:
         elevation: 5 # затенение
         padding: 25
         spacing: 25
-        orientation: "vertical"
+        orientation: Orientation.vertical
     
         MDLabel:
             id: welcome_label
             text: "welcome"
             font_size: 40
-            halign: "center"
+            halign: Halign.center
             size_hint_y: None
             height: self.texture_size[1]
             padding_y: 15
