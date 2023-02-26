@@ -7,30 +7,20 @@ from kivymd.app import MDApp
 
 class Ex47MdDialButtonMenu(MDApp):
 
-    class Orientation(object):
-        vertical = "vertical"
-        horizontal = "horizontal"
-
-    presets: tuple = ("Hello <username>",
-                      "Already logged in", "Well again",
-                      "Over and over and over again", "...")
-    preset_ind: int = 0
     data: dict = dict((("Python", "language-python"),
                        ("Ruby", "language-ruby"),
                        ("Java", "language-java")))
-
-    preset_length: int = len(presets)
 
     def callback(self, instance):
         self.root.ids.my_label.text = f"{instance.icon}"
         return
 
     def open(self):
-        self.root.ids.my_label.text = f"opened"
+        self.root.ids.my_label.text = "opened"
         return
 
     def close(self):
-        self.root.ids.my_label.text = f"closed"
+        self.root.ids.my_label.text = "closed"
         return
 
     def build(self):

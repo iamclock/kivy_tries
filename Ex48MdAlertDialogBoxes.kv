@@ -1,0 +1,20 @@
+# Alert Dialog Boxes example exercise 48
+
+#:import Orientation tools.Orientation
+#:import Halign tools.Halign
+#:import Pos tools.Pos
+
+MDBoxLayout:
+    orientation: Orientation.vertical
+    
+    MDScreen:
+        
+        MDRectangleFlatButton:
+            text: "Some alert popup text"
+            pos_hint: {Pos.c_x: .5, Pos.c_y: .5}
+            on_release: app.showing_alert_dialog()
+        
+        MDLabel:
+            id: my_label
+            text: "Some text"
+            pos_hint: {Pos.c_x: .95, Pos.c_y: .4}
