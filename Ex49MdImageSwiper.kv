@@ -1,0 +1,35 @@
+# Image Swiper example exercise 49
+
+#:import Orientation tools.Orientation
+#:import Halign tools.Halign
+#:import Pos tools.Pos
+
+<CustomSwiper@MDSwiperItem>:
+    FitImage:
+        source: "imgs/btn.jpg"
+        radius: (10,)
+
+# MDScreen: # for normal loader
+<MDScreen>: # for HotReload kaki feature
+    MDTopAppBar: # MDToolbar не работает
+        id: toolbar
+        title: "Swiper application"
+        elevation: 4
+        pos_hint: {Pos.top: 1}
+    
+    MDSwiper:
+        size_hint_y: None
+        height: root.height - toolbar.height - dp(40)
+        y: root.height - self.height - toolbar.height - dp(20)
+        
+        CustomSwiper:
+        
+        CustomSwiper:
+        
+        CustomSwiper:
+        
+        CustomSwiper:
+        
+        CustomSwiper:
+        
+
