@@ -1,14 +1,12 @@
 from kivy.app import App
-from kivy.uix.widget import Widget
-# from kivy.properties import ObjectProperty
-# from kivy.lang import Builder
-# from kivy.uix.screenmanager import ScreenManager, Screen
-# from kivy.uix.tabbedpanel import TabbedPanel
-from kivy.animation import Animation
-from random import uniform
+from kivy.lang import Builder
+from kivy.uix.screenmanager import ScreenManager, Screen
 
+# kv = Builder.load_file("Ex31Screens.kv")
 
 # Screens
+
+
 class MainWindow(Screen):
     pass
 
@@ -26,8 +24,9 @@ class WindowsManager(ScreenManager):
 
 
 class Ex31Screens(App):
-    def build(self):
-        return kv  # For screenmanager
+    # def build(self):
+    #     return kv  # For screenmanager
+    pass
 
 
 if __name__ == '__main__':

@@ -1,17 +1,15 @@
-from kivy.app import App
-from kivy.uix.widget import Widget
-# from kivy.properties import ObjectProperty
-# from kivy.lang import Builder
-# from kivy.uix.screenmanager import ScreenManager, Screen
-# from kivy.uix.tabbedpanel import TabbedPanel
-from kivy.animation import Animation
-from random import uniform
+"""
+Tabs example exercise 34
+"""
 
-# Tabs example exercise 34
+from kivy.app import App
+from kivy.lang import Builder
+
+
 class Ex34Tabs(App):
 
     # def build(self):
-    #     return CustomLayout()
+    #     return Builder.load_file("Ex34Tabs.kv")
     pass
 
 
