@@ -12,5 +12,6 @@ class Halign(object):
 
 
 class Pos(object):
+    top = "top"
     c_x = "center_x"
     c_y = "center_y"
